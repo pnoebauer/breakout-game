@@ -1,5 +1,5 @@
 // import React from 'react';
-import { getRange } from '../../utils';
+import { getRange } from '../utils';
 
 export const BLOCK_MAX_DENSITY = 3
 

@@ -10,6 +10,12 @@ export const flatten = arrays => arrays.flat();
 	//const removeListener = registerListener ==> this adds it
 	//removeListener ==> this removes it again
 export const registerListener = (eventName, handler) => {
-  window.addEventListener(eventName, handler)
-  return () => window.removeEventListener(eventName, handler)
+  window.addEventListener(eventName, handler);
+  return () => window.removeEventListener(eventName, handler);
 }
+
+export const toDegrees = radians => (radians * 180) / Math.PI;
+export const toRadians = degrees => (degrees * Math.PI) / 180;
+
+export const withoutElement = (array, element) => array.filter(e => e !== element); //removes element
+export const updateElement = (array, oldElement, newElement) => array.map(e => e===oldElement ? newElement : e); //replaces oldElement with newElement
